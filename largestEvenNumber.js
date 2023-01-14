@@ -19,7 +19,7 @@ const largestEvenNumberA = (numbers) => {
     let resultA = Number.MIN_SAFE_INTEGER;
 
     const funArrow =  (item) => {
-        resultA = ( (item%2==0 && item>resultA)?item:resultA );
+        resultA = ( (item%2!=0 && item>resultA)?item:resultA );
     }
     numbers.forEach(funArrow);
     return (resultA===Number.MIN_SAFE_INTEGER)? -1: resultA;
